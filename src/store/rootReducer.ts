@@ -6,6 +6,7 @@ import {
   default as GallerySlice,
   default as PhotoGallarySlice
 } from 'src/requests/PhotoGallery/PhotoGallery';
+import Employeeslice from '../requests/Employee/RequestEmployee';
 import Holidaysslice from '../requests/Holiday/Holiday';
 import Notificationslice from '../requests/Notification/Notification';
 
@@ -18,6 +19,7 @@ const rootReducer = combineReducers({
   Gallery: GallerySlice,
   SchoolSettings: SchoolListslice,
   StaffKidLogin: Staffkidslice,
+  Employee: Employeeslice,
 
 });
 

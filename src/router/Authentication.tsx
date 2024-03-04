@@ -1,8 +1,8 @@
 import { Suspense, lazy } from 'react';
 import { Navigate } from 'react-router-dom';
 
+import AddEmployee from 'src/components/Employee/AddEmployee';
 import SuspenseLoader from 'src/layouts/components/SuspenseLoader';
-
 const Loader = (Component) => (props) =>
 (
   <Suspense fallback={<SuspenseLoader />}>
@@ -25,6 +25,11 @@ const Home = Loader(
   lazy(() => import('src/components/Home/Home'))
 );
 
+const EmployeeList = Loader(lazy(() =>
+  import('src/components/Employee/EmployeeList')
+));  // to authenticate List
+
+
 const AuthenticationRoute = [
   {
     path: '/',
@@ -33,6 +38,18 @@ const AuthenticationRoute = [
   {
     path: 'Home',
     element: <Home />
+  },
+  {
+    path: 'AddEmployee',
+    element: <AddEmployee />
+  },
+  {
+    path: 'AddEmployee/:Id',
+    element: <AddEmployee />
+  },
+  {
+    path: 'EmployeeList',
+    element: <EmployeeList />
   },
   {
     path: 'forgotPassword',
