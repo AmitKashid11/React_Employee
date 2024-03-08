@@ -9,6 +9,7 @@ import {
 import Employeeslice from '../requests/Employee/RequestEmployee';
 import Holidaysslice from '../requests/Holiday/Holiday';
 import Notificationslice from '../requests/Notification/Notification';
+import Taskslice from '../requests/Task/RequestTask';
 
 const rootReducer = combineReducers({
   Holidays: Holidaysslice,
@@ -20,6 +21,7 @@ const rootReducer = combineReducers({
   SchoolSettings: SchoolListslice,
   StaffKidLogin: Staffkidslice,
   Employee: Employeeslice,
+  Task: Taskslice
 
 });
 
