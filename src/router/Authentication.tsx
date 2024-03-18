@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react';
 import { Navigate } from 'react-router-dom';
 
+import DropDown from 'src/components/DropDown/DropDown';
 import AddEmployee from 'src/components/Employee/AddEmployee';
 import AddTask from 'src/components/Task/AddTask';
 import SuspenseLoader from 'src/layouts/components/SuspenseLoader';
@@ -66,6 +67,10 @@ const AuthenticationRoute = [
   {
     path: 'AddTask/:Id',
     element: <AddTask />
+  },
+  {
+    path: 'DropDown',
+    element: <DropDown />
   },
   {
     path: 'forgotPassword',
