@@ -51,10 +51,13 @@ const DropDown = () => {
     }
     const clickCountry = (value) => {
         setCountry(value)
+        setState('')
+        setCity('')
     }
 
     const clickState = (value) => {
         setState(value)
+        setCity('')
     }
 
     const clickCity = (value) => {
